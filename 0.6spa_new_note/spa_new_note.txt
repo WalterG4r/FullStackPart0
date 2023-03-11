@@ -1,0 +1,15 @@
+note over browser:
+user fills the form and press the Send button
+end note
+note over browser:
+browser executes event handler that:
+1. creates a note
+2. adds the note to the list of notes on browser
+3. sends the note to the server
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa&{"content":"dfasdr","date":"2023-02..."}
+server-->browser: response 201 payload: '{message: "note created"}'
+
+note over browser:
+browser shows response in the console
+end note
